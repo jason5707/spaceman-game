@@ -1,15 +1,33 @@
 // spaceman game pseudocode.
 
-// with every wrong guess a spaceman floats away
+// with every wrong guess a life is deducted
 
 
 // 1. Establish an array to hold words 
-
+const words = ['Galaxy', 'Planet', 'Astronaut', 'Star', 'Meteor', 'Spaceship', 'Satellite', 'Comit', 'Astronomy', 'Mars' ]
 // 2. create a function to select a random word in the words array
 
 // 3. add that to randomWord array
-
+let randomWord = [];
+function randomWordSelector() {
+    let randomIndex = math.floor(math.random() * words.length);
+    randomWord.push(words[randomIndex]);
+    console.log(randomWord)
+}
 // 4. make a string of alphabets 
+      const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const container = document.querySelector("#container");
+
+      for (let i = 0; i < alphabet.length; i++) {
+        let button = document.createElement("button");
+        button.innerHTML = alphabet[i];
+        button.onclick = function() {
+          // Add your game logic here
+          console.log("Button clicked: " + this.innerHTML);
+        };
+        container.appendChild(button);
+      }
+
 
 // 5. create a function that allows each alphabet to be a button
 
