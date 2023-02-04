@@ -15,18 +15,6 @@ function randomWordSelector() {
     console.log(randomWord)
 }
 // 4. make a string of alphabets 
-      const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      const container = document.querySelector("#container");
-
-      for (let i = 0; i < alphabet.length; i++) {
-        let button = document.createElement("button");
-        button.innerHTML = alphabet[i];
-        button.onclick = function() {
-          // Add your game logic here
-          console.log("Button clicked: " + this.innerHTML);
-        };
-        container.appendChild(button);
-      }
 
 
 // 5. create a function that allows each alphabet to be a button
