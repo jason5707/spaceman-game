@@ -4,16 +4,21 @@
 
 
 // 1. Establish an array to hold words 
-const words = ['Galaxy', 'Planet', 'Astronaut', 'Star', 'Meteor', 'Spaceship', 'Satellite', 'Comit', 'Astronomy', 'Mars' ]
+const words = ['Galaxy', 'Planet', 'Astronaut', 'Star', 'Meteor', 'Spaceship', 'Satellite', 'Comit', 'Astronomy', 'Mars' ];
 // 2. create a function to select a random word in the words array
 
 // 3. add that to randomWord array
+window.onload = function() {
+
 let randomWord = [];
 function randomWordSelector() {
-    let randomIndex = math.floor(math.random() * words.length);
+    let randomIndex = Math.floor(Math.random() * words.length);
     randomWord.push(words[randomIndex]);
-    console.log(randomWord)
+    document.getElementById("word").innerHTML = randomWord
 }
+
+    document.getElementById("startBtn").addEventListener("click", randomWordSelector);
+};
 // 4. make a string of alphabets 
 
 
