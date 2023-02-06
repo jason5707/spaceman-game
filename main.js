@@ -22,6 +22,7 @@ function randomWordSelector() {
 // 4. make a string of alphabets 
 
 
+
 // 5. create a function that allows each alphabet to be a button
 
 // 6. addEventListener for a for a function to execute when button clicked.
