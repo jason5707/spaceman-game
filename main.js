@@ -17,6 +17,8 @@ function randomWordSelector() {
     let randomIndex = Math.floor(Math.random() * words.length);
     randomWord.push(words[randomIndex]);
     document.getElementById("word").innerHTML = randomWord
+
+ 
 }
     document.getElementById("startBtn").addEventListener("click", randomWordSelector);
 
@@ -24,47 +26,60 @@ function randomWordSelector() {
 // 5. create a function that allows each alphabet to be a button
 
 const keyboard = document.getElementById("keyboard");
-const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const alphabet = 'QGBCMEUVFTIQPZJLYOHSNRKDAXW';
 alphabet.split('').forEach(letter => {
     const key= document.createElement("button");
     key.innerHTML = letter;
     key.addEventListener('click', () => {
         console.log(`key ${letter} was pressed.`);
+
+        if (randomWord[0].includes(letter)) {
+            console.log('Correct');
+            let newHiddenWord = "";
+            for (let i = 0; i < randomWord[0].length; i++) {
+            if (randomWord[0][i] === letter) {
+                newHiddenWord += letter;
+        } else {
+            newHiddenWord += hiddenWord[i];
+        }
+            }
+            hiddenWord = newHiddenWord;
+            document.getElementById("word").innerHTML = hiddenWord;
+        } else {
+            console.log("Incorrect");
+            lives--;
+            console.log(`You have ${lives} lives left.`);
+            if (lives === 0) {
+                console.log("Game Over");
+            }
+        }
     });
     keyboard.appendChild(key);
 });
-};
+}
 
-// 6. addEventListener for a function to execute when button clicked.
+function hideButton(startBtn) {
+    startBtn.style.display = 'none';
+}
+// 6. addEventListener for a function when clicked
 // returning thruthy or falsy depending on what answer exist in randomWord array
+    
 
 // 7.  create function for when wrong answer a spaceman will be deducted until 0 if {
-
+// when 
 // 9. if 0 player lose return 'You lose!' & 'play again' button
 
-
+// else if 
 // 10.if right answer no spaceman deducted 
-
+// if 
 
 // 11. if all correct answers are revealed return 'You win!' & play again button
-// }
+// function to renderMessage
+
+
 // 12.  create an variable that holds spacemen count
+// let lives = 5;
 
-
-
- 
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
+// 13. hide letters in randomWord so player
+// can guess.
 
