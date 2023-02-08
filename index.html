@@ -14,15 +14,20 @@
 <body>
     <nav>SPACEMAN</nav>
     <aside>
-        <div>Lives</div>
-        <div>.</div>
-        <div>.</div>
-        <div>.</div>
-        <div>.</div>
-        <div>.</div>
+        Lives
+        <div id="lives"></div>
+        <div id="lives"></div>
+        <div id="lives"></div>
+        <div id="lives"></div>
+        <div id="lives"></div>
+        <script>
+            let lives = 5;
+            document.getElementById("lives").innerHTML = lives;
 
-
-
+            function playerWrong(){
+                lives--;document.getElementById("lives").innerHTML = lives;
+            }
+        </script>
     </aside>
     <header>
        <h1>You Win!</h1>

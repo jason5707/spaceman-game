@@ -17,8 +17,6 @@ function randomWordSelector() {
     let randomIndex = Math.floor(Math.random() * words.length);
     randomWord.push(words[randomIndex]);
     document.getElementById("word").innerHTML = randomWord
-
- 
 }
     document.getElementById("startBtn").addEventListener("click", randomWordSelector);
 
@@ -30,10 +28,13 @@ const alphabet = 'QGBCMEUVFTIQPZJLYOHSNRKDAXW';
 alphabet.split('').forEach(letter => {
     const key= document.createElement("button");
     key.innerHTML = letter;
-    key.addEventListener('click', () => {
+    key.addEventListener('click', (evt) => {
+        hideButton(evt.target);
         console.log(`key ${letter} was pressed.`);
-
-        if (randomWord[0].includes(letter)) {
+// 6. addEventListener for a function when clicked
+// returning thruthy or falsy depending on what answer exist in randomWord array
+    
+        if (randomWord[0].includes(`${letter}`)) {
             console.log('Correct');
             let newHiddenWord = "";
             for (let i = 0; i < randomWord[0].length; i++) {
@@ -58,12 +59,15 @@ alphabet.split('').forEach(letter => {
 });
 }
 
-function hideButton(startBtn) {
-    startBtn.style.display = 'none';
-}
-// 6. addEventListener for a function when clicked
-// returning thruthy or falsy depending on what answer exist in randomWord array
+
+
+function hideButton(clickedButton) {
+    console.log(clickedButton);
+    clickedButton.style.display = 'none';
     
+}
+    
+
 
 // 7.  create function for when wrong answer a spaceman will be deducted until 0 if {
 // when 
@@ -78,7 +82,7 @@ function hideButton(startBtn) {
 
 
 // 12.  create an variable that holds spacemen count
-// let lives = 5;
+
 
 // 13. hide letters in randomWord so player
 // can guess.
