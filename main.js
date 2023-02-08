@@ -15,7 +15,11 @@ let randomWord = [];
 function randomWordSelector() {
     if (randomWord.length > 0) return;
     let randomIndex = Math.floor(Math.random() * words.length);
-    randomWord.push(words[randomIndex]);
+    // found a solution on splitting the word into an array of letters
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+    randomWord.push(words[randomIndex].split(''));
+    console.log(randomWord);
+
     document.getElementById("word").innerHTML = randomWord
 }
     document.getElementById("startBtn").addEventListener("click", randomWordSelector);
@@ -37,11 +41,14 @@ alphabet.split('').forEach(letter => {
         if (randomWord[0].includes(`${letter}`)) {
             console.log('Correct');
             let newHiddenWord = "";
+            console.log(newHiddenWord)
             for (let i = 0; i < randomWord[0].length; i++) {
             if (randomWord[0][i] === letter) {
                 newHiddenWord += letter;
+                console.log(newHiddenWord)
         } else {
-            newHiddenWord += hiddenWord[i];
+
+            // newHiddenWord += hiddenWord[i];
         }
             }
             hiddenWord = newHiddenWord;
