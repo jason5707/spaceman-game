@@ -13,25 +13,10 @@
 </head>
 <body>
     <nav>SPACEMAN</nav>
-    <aside>
-        Lives
-        <div id="lives"></div>
-        <div id="lives"></div>
-        <div id="lives"></div>
-        <div id="lives"></div>
-        <div id="lives"></div>
-        <script>
-            let lives = 5;
-            document.getElementById("lives").innerHTML = lives;
-
-            function playerWrong(){
-                lives--;document.getElementById("lives").innerHTML = lives;
-            }
-        </script>
-    </aside>
+    <aside>Lives</aside>
     <header>
        <h1>You Win!</h1>
-       <div><button id="startBtn" onclick="hideButton(this)">START GAME</button></div>
+       <div><button id="startBtn">START GAME</button></div>
        <div id="word"></div>
        <div id="keyboard"></div>
     </header>
