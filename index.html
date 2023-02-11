@@ -13,10 +13,13 @@
 </head>
 <body>
     <nav>SPACEMAN</nav>
-    <aside>Lives</aside>
+    <aside>Lives
+        <div id="counter"></div>
+    </aside>
+
     <header>
-       <h1>You Win!</h1>
-       <div><button id="startBtn">START GAME</button></div>
+       <h1 id="results"></h1>
+       <div><button id="startBtn" onclick="this.style.display='none'">START GAME</button></div>
        <div id="word"></div>
        <div id="keyboard"></div>
     </header>
