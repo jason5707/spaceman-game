@@ -48,10 +48,11 @@ console.log(`key ${letter} was pressed.`);
                 console.log(displayWord)
                 console.log("Correct")
                 
-                
+            
         
                 }
             });
+        
             if (!displayWord.includes(letter)) {
                 lives--;
                 document.getElementById("counter").innerHTML = lives;
@@ -64,13 +65,20 @@ console.log(`key ${letter} was pressed.`);
                     button.style.display = "none";
                 
                 document.getElementById("word").innerHTML = "TRY AGAIN";
-                document.getElementById("startBtn").style.display = "inline-back";
+                document.getElementById("startBtn").style.display = "re";
             });
             }
+            if (displayWord === randomWord.join('')) {
+                const buttons = document.querySelectorAll("button");
+                buttons.forEach(button => {
+                    button.style.display = "none";
+                document.getElementById("word").innerHTML = "YOU WIN";
+                
+                console.log("YOU WIN");
 
-        });
-
-    
+            })
+        }
+    })
     keyboard.appendChild(key);
     });
 }
