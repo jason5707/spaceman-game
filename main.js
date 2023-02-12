@@ -73,7 +73,7 @@ const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
                 buttons.forEach(button => {
                     button.style.display = "none";
                 document.getElementById("word").innerHTML = "YOU WIN";
-                
+                 
                 
                 
                 setTimeout(function() {
