@@ -12,14 +12,14 @@
 <img width="1420" alt="Screenshot 2023-02-11 at 20 56 56" src="https://user-images.githubusercontent.com/122539809/218288853-7a3b18fd-93cc-42d1-b63d-f492571179f9.png">
 
 
-Technologies Used: HTML, CSS & JAVASCRIPT
+Technologies Used: HTML, CSS & Javascript
 
 Link to game: https://jason5707.github.io/spaceman-game/
 
  Next Steps:
-Creating a hint for certain words.
-Revealing a letter or 2 at the Start of the game.
-Animation.
+Creating a hint for certain words,
+revealing a letter or 2 at the Start of the game and
+animation.
 
 
 
